@@ -19,4 +19,3 @@ This function returns a vector that contains propensity function corresponding t
 This function creates a propensity function of the model (required for the stochastic simulation)
 This function is called from the "makeModel.R" function.
 }
-

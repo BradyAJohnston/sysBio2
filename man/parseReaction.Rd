@@ -24,4 +24,3 @@ This function parses eaction and transforms the canonical form of a mass action 
 into a format that can be used to describe them as ODEs. This function is called from the
 "parseReaction.R" function.
 }
-

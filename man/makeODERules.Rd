@@ -19,4 +19,3 @@ This function returns rules defined for the model in the format appropriate for 
 This function  creates assignment (in the format required for ODE solver) for each of the specified rules
 based on their defined values.  This function is called from the "makeModel.R" function.
 }
-

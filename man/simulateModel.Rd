@@ -45,4 +45,3 @@ simResults <-simulateModel(exmp)
 plotResults(simResults, title="Simulation results")
 
 }
-

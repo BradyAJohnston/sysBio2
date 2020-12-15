@@ -19,4 +19,3 @@ This function returns a stochastic matrix that corresponds to a defined model.
 This function creates a stochastic matrix of the model (required for the stochastic simulation)
 This function is called from the "makeModel.R" function.
 }
-

@@ -39,4 +39,3 @@ exmp <- newModel("This is an example of a new model")
 exmp
 
 }
-

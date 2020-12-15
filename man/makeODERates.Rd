@@ -16,4 +16,3 @@ This function returns reaction rates of the model in the format appropriate for 
 This function  creates assignment (in the format required for ODE solver) for each of the specified reaction rates 
 based on their assigned/specified value.  This function is called from the "makeModel.R" function.
 }
-

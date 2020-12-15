@@ -16,4 +16,3 @@ A residual function that will be used within the ODEs solver.
 This function  creates a residual function that will be used within the ODEs solver. 
 This function is called from the "simulateModel.R" function
 }
-

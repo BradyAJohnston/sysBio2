@@ -16,4 +16,3 @@ This function returns model parameters in the format appropriate for the ODEs so
 This function creates assignment (in the format required for ODE solver) for each each of the specified 
 paramterers based on their assigned/specified value. This function is called from the "makeModel.R" function.
 }
-

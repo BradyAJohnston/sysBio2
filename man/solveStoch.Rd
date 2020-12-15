@@ -4,10 +4,24 @@
 \alias{solveStoch}
 \title{Model simulation (stochastic simulation)}
 \usage{
-solveStoch(x, times = 10, method = "D", simName = "", tau = 0.3,
-  f = 10, epsilon = 0.03, nc = 10, hor = NaN, dtf = 10, nd = 100,
-  ignoreNegativeState = TRUE, consoleInterval = 0, censusInterval = 0,
-  verbose = FALSE, maxWallTime = Inf)
+solveStoch(
+  x,
+  times = 10,
+  method = "D",
+  simName = "",
+  tau = 0.3,
+  f = 10,
+  epsilon = 0.03,
+  nc = 10,
+  hor = NaN,
+  dtf = 10,
+  nd = 100,
+  ignoreNegativeState = TRUE,
+  consoleInterval = 0,
+  censusInterval = 0,
+  verbose = FALSE,
+  maxWallTime = Inf
+)
 }
 \arguments{
 \item{x}{model name (required)}
@@ -74,4 +88,3 @@ simResults.stoch <- solveStoch(exmp)
 plotResults(simResults.stoch, title="Simulation results (stochastic)")
 
 }
-

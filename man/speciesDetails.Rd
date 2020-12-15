@@ -16,4 +16,3 @@ A vector that contains species name and the corresponding stoichometric coeffici
 This function returns info about species included in the reaction (species name and the corresponding stoichometric coefficient). 
 It is called within the "parseComponents.R" function
 }
-

@@ -44,4 +44,3 @@ printInfo(exmp)
 printInfo(exmp, allDetails=TRUE)
 
 }
-

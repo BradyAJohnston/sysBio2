@@ -1,4 +1,4 @@
-Package: sysBio
+Package: sysBio2
 Type: Package
 Title: A package for modeling biological systems
 Version: 1.0.0
@@ -21,7 +21,7 @@ Imports:
     reshape2 (>= 1.4.1)
 License: MIT
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 7.1.1
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr

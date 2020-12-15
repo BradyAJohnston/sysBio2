@@ -4,35 +4,34 @@
 \alias{addMAreaction}
 \title{Adding molecular reactions.}
 \usage{
-addMAreaction(x, react = NA, r1 = NA, r2 = NA, name = NA,
-  overwrite = FALSE)
+addMAreaction(x, react = NA, r1 = NA, r2 = NA, name = NA, overwrite = FALSE)
 }
 \arguments{
 \item{x}{model to which the reaction is added (required)}
 
-\item{react}{reaction to be added (required). sysBio uses the "->" symbol 
-for forward reaction and the "=" symbol for the reversible reaction; 
-values that represent stoichometric coefficients should be explicitly 
-included in the reaction definition (e.g., 2A + B -> 1.5AB); sysBio 
+\item{react}{reaction to be added (required). sysBio uses the "->" symbol
+for forward reaction and the "=" symbol for the reversible reaction;
+values that represent stoichometric coefficients should be explicitly
+included in the reaction definition (e.g., 2A + B -> 1.5AB); sysBio
 uses a term null to describe a null species (source or sink).}
 
-\item{r1}{reaction rate (forward); if the name is not specified, sysBio 
-will assign a generic name to the reaction rate, in the format 
+\item{r1}{reaction rate (forward); if the name is not specified, sysBio
+will assign a generic name to the reaction rate, in the format
 r_{reaction_rate_number}}
 
-\item{r2}{reaction rate (reversible); if the name is not specified, 
-sysBio will assign a generic name to the reaction rate, in the format 
+\item{r2}{reaction rate (reversible); if the name is not specified,
+sysBio will assign a generic name to the reaction rate, in the format
 r_{reaction_rate_number}}
 
-\item{name}{name of the reaction; if the name is not specified, sysBio 
-will assign a generic name to the reaction, in the format 
+\item{name}{name of the reaction; if the name is not specified, sysBio
+will assign a generic name to the reaction, in the format
 Reaction_{reaction_number}}
 
-\item{overwrite}{a flag that allows changes to the existing reaction 
+\item{overwrite}{a flag that allows changes to the existing reaction
 (default value FALSE)}
 }
 \value{
-This function adds information about the reaction into the model (given as a first argument of the function). 
+This function adds information about the reaction into the model (given as a first argument of the function).
     Reaction information is stored in the list format and contain the following elements:
     \itemize{
     \item{reaction$rName - name of the reaction}
@@ -44,13 +43,13 @@ This function adds information about the reaction into the model (given as a fir
 }
 \description{
 Molecular reactions can be described by differential equation that define the rate of change in molecular concentrations. addMAreaction function
-transforms reactions into ODEs using the law of mass action. Given a reaction: k1A + k2B -(r)-> k3*AB, where A and B represent reactants and AB 
-represents a product (in general, we can call A, B, and AB species), r represents the reaction rate, and k1, k2, and k3 represent stoichometric 
+transforms reactions into ODEs using the law of mass action. Given a reaction: k1A + k2B -(r)-> k3*AB, where A and B represent reactants and AB
+represents a product (in general, we can call A, B, and AB species), r represents the reaction rate, and k1, k2, and k3 represent stoichometric
 coefficients, one can use the law of mass action to determine the change in the amount of each species as: dA/dt = dB/dt = - dAB/dt = -rA^(k1)B^(k2).
-Or in general, given a reaction sum(i=1:m)[k{i}S{i}] -(r)-> sum(j=1:n)[l{j}S{j}], changes in the amount of each species can be represented as 
-dS/dt = r(l{i}-k{i})prod(i=1:m)S^(k{i}). 
-addMAreaction function adds a mass action reaction into an existing model. sysBio allows users to write reactions in two formats: 1. as forward 
-(non-reversible) reactions, e.g., A -> B, with rate r, 2. as reversible reactions, e.g., A = B, with forward rate r1 and reverse rate r2. 
+Or in general, given a reaction sum(i=1:m)[k{i}S{i}] -(r)-> sum(j=1:n)[l{j}S{j}], changes in the amount of each species can be represented as
+dS/dt = r(l{i}-k{i})prod(i=1:m)S^(k{i}).
+addMAreaction function adds a mass action reaction into an existing model. sysBio allows users to write reactions in two formats: 1. as forward
+(non-reversible) reactions, e.g., A -> B, with rate r, 2. as reversible reactions, e.g., A = B, with forward rate r1 and reverse rate r2.
 sysBio transforms and  interprets the reversible reactions as two forward reactions, e.g., A -> B, with rate r1, and B -> A, with rate r2.
 }
 \examples{
@@ -63,4 +62,3 @@ addMAreaction(exmp, react="AB -> null", "rAB")
 exmp$reaction
 
 }
-

@@ -18,4 +18,3 @@ This function returns a product form for a reactant/species from the reactions
 \description{
 This function creates the product form for all of the species. It is called from the "parseComponents.R" function.
 }
-

@@ -19,4 +19,3 @@ This function returns a data frame that contains parsed components of a reaction
 \description{
 This function parses components of a reaction. This function is called from the "parseReaction.R" function.
 }
-
