@@ -146,7 +146,9 @@ makeModel <- function(x){
     y$isChecked <- 1
 
     # Return model to the original object
-    assign(deparse(substitute(x)), y, envir = .GlobalEnv)
+    # assign(deparse(substitute(x)), y, envir = .GlobalEnv)
+
+    y
 
   } else {
     print("No reactions found!")
