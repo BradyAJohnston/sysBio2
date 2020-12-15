@@ -13,7 +13,7 @@ validateModel(x)
 Numeric value - 1 if model has been validated, 0 if validation failed
 }
 \description{
-This function validates model, i.e., checks if all reactions, parameters, rates, rules, etc., are 
+This function validates model, i.e., checks if all reactions, parameters, rates, rules, etc., are
 incoorporated into a model, as well as whether all variables have assigned values (either constant or in a form of a function).
 }
 \examples{
@@ -28,7 +28,7 @@ addMAreactRate(exmp, "k", "fixed", "0.5")
 addMAreactRate(exmp, "rAB", "assigned", "p1*A")
 
 addParameters(exmp, "p1", 0.75)
- 
+
 addSpecies(exmp, "A", 10)
 addSpecies(exmp, "B", 10)
 addSpecies(exmp, "AB", 0)
@@ -36,7 +36,7 @@ addSpecies(exmp, "AB", 0)
 addRule(exmp, "rule B", "ODEs", "B=-0.1*AB")
 
 makeModel(exmp)
-  
+
 validateModel(exmp)
 
 }
