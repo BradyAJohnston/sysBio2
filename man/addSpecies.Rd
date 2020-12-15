@@ -16,7 +16,7 @@ addSpecies(x, spName = NA, iVal = "0", overwrite = FALSE)
 \item{overwrite}{a flag that allows changes to the existing species (default value FALSE)}
 }
 \value{
-This function adds information about species into the model (given as a first argument of the function). 
+This function adds information about species into the model (given as a first argument of the function).
     Species information is stored in the list format and contain the following elements:
     \itemize{
     \item{species$sName - species name}
@@ -24,9 +24,9 @@ This function adds information about species into the model (given as a first ar
     }
 }
 \description{
-This function allows users to specify initial values for species within the model. 
-Model must contain at least one species. Initial values for all species, as well as all rates and 
-parameters have to be defined. sysBio uses a term null to describe a null species (source or sink); 
+This function allows users to specify initial values for species within the model.
+Model must contain at least one species. Initial values for all species, as well as all rates and
+parameters have to be defined. sysBio uses a term null to describe a null species (source or sink);
 null species do not need to be defined.
 }
 \examples{
@@ -41,11 +41,11 @@ addMAreactRate(exmp, "k", "fixed", "0.5")
 addMAreactRate(exmp, "rAB", "assigned", "p1*A")
 
 addParameters(exmp, "p1", 0.75)
- 
+
 addSpecies(exmp, "A", 10)
 addSpecies(exmp, "B", 10)
 addSpecies(exmp, "AB", 0)
-  
+
 # Show info about model reactions and species
 exmp$reaction
 exmp$species

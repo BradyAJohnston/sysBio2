@@ -11,17 +11,17 @@ addMAreactRate(x, rr = NA, type = "fixed", val = "1", overwrite = FALSE)
 
 \item{rr}{reaction rate name (required),}
 
-\item{type}{reaction rate type; currently supported options are fixed and assigned; 
+\item{type}{reaction rate type; currently supported options are fixed and assigned;
 if the value is not specified, sysBio will set type to fixed}
 
-\item{val}{reaction rate value; if defined as fixed, the value should be specified as a number. 
-e.g., 0.1; if defined as assigned, the value can be defined in form of an assignment (function), 
+\item{val}{reaction rate value; if defined as fixed, the value should be specified as a number.
+e.g., 0.1; if defined as assigned, the value can be defined in form of an assignment (function),
 e.g., B or 10*A. If the value is not specified, sysBio will set the value to 1}
 
 \item{overwrite}{a flag that allows changes to the existing reaction rate (default value FALSE)}
 }
 \value{
-This function adds information about reaction rates into the model (given as a first argument of the function). 
+This function adds information about reaction rates into the model (given as a first argument of the function).
     Reaction rates information is stored in the list format and contain the following elements:
     \itemize{
     \item{rates$rrName - reaction rate name}
@@ -30,10 +30,10 @@ This function adds information about reaction rates into the model (given as a f
     }
 }
 \description{
-This function allows users to define reaction rate. Reaction rate can be 
-defined as a fixed numerical value (e.g., r=m1, where m1 represents a 
-constant parameter, m1=0.9, or just as r=0.9) or initial assignments 
-(e.g., r=m1*A, where m1 represents a constant parameter and A represents 
+This function allows users to define reaction rate. Reaction rate can be
+defined as a fixed numerical value (e.g., r=m1, where m1 represents a
+constant parameter, m1=0.9, or just as r=0.9) or initial assignments
+(e.g., r=m1*A, where m1 represents a constant parameter and A represents
 a species).
 }
 \examples{
@@ -47,7 +47,7 @@ addMAreactRate(exmp, "rb", "fixed", "0.75")
 addMAreactRate(exmp, "k", "fixed", "0.5")
 addMAreactRate(exmp, "rAB", "assigned", "p1*A")
 
- 
+
 # Show info about model reactions and rates
 exmp$reaction
 exmp$rates
