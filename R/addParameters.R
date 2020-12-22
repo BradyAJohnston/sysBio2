@@ -39,11 +39,14 @@
 #addParameters.function <- function(x, pName=NA, iVal="1", overwrite=FALSE){
 addParameters <- function(x, pName=NA, iVal="1", overwrite=FALSE){
   
-  if (!exists(deparse(substitute(x))))
-    stop("Specified model does not exist!")
+  if ("list" %in% is(x)) {
+  }
+  else{ stop("Specified model does not exist!")
+      }
   
-  if (is.na(pName))
+  if (is.na(pName)){
     stop("Parameter name is not specified!")
+  }
   
   y <- x
   
