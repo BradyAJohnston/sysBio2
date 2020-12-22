@@ -79,7 +79,8 @@ addParameters <- function(x, pName=NA, iVal="1", overwrite=FALSE){
   
   y$isChecked <- 0
   
-  assign(deparse(substitute(x)), y, envir = .GlobalEnv)  
+  #assign(deparse(substitute(x)), y, envir = .GlobalEnv)  
+  y
 }
 
 #addParameters <- cmpfun(addParameters.function)
